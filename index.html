@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Anwar Hafid Strategic Center</title>
+  
+  <style>
+    /* Reset margin & padding agar aplikasi penuh satu layar */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Mencegah munculnya scroll ganda dari browser HTML */
+      background-color: #f8fafc; /* Warna background default sebelum iframe dimuat */
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Pengaturan Iframe agar responsif 100% dan menghilangkan border */
+    .app-wrapper {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
+
+    /* Loader / Loading Screen sementara (opsional, jika koneksi lambat) */
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1; /* Berada di belakang iframe */
+      color: #94a3b8;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader">
+    Memuat Aplikasi...
+  </div>
+
+  <!-- Iframe untuk Web App Apps Script (Link /exec untuk akses publik) -->
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbyHwPN_qNbrSuxgUOBdFztE1B94UrUKg4SvybRvFKJBp_9RFWcbefbTczWF4-cXP2c/exec" 
+    class="app-wrapper" 
+    allow="autoplay; camera; microphone; fullscreen; clipboard-read; clipboard-write"
+    title="Dashboard Strategic Center">
+  </iframe>
+
+</body>
+</html>
